@@ -2,13 +2,18 @@
 <html>
 
   <head>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <script> type="text/javascript" src='https://www.gstatic.com/charts/loader.js'></script>
+      <script type="text/javascript">
+          google.charts.load('current',{'packages':['coreheart']});
+          google.charts.setOnLoadCallback(drawChart);
+      </script>
+          
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-        <!Style for Tables>
         table {
             font-family: aria;, sans-serif;
             border-collapse: collapse
-            width: 30%;
+            width: 50%;
         }
 
         td, th {
@@ -21,14 +26,109 @@
             background-color: #dddddd;
         }
       .myslides {display:none;}
+                  .h {
+                text-align: center;
+            }
+            /* Slide to centre the image */
+            #slide-container {
+                text-align: center;
+                position: relative;
+            }
+            /* Style for buttons */
+            .button-container {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: -100px; /* Add some margin between the image and button */
+            }
+            .button {
+                padding: 10px 20px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+                margin: 0 5px; /* Add some margin between the buttons */
+                transition: all 0.1s;
+            }
+            .button:hover {
+
+             transform: translateY(-3px);
+
+            }
+
+            .slide-number-container {
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-bottom: -50px; /* Add some margin between the slide number buttons and the image */
+            }
     </style>
     <h2> URN 6796018 </h2>
+              <script type="text/javascript">
+            function drawChart(){
+                var data = google.visualization.arrayToDataTable([
+                    ['Task','Hours per Day'],
+                    ['Work',8],
+                    ['Sleep',8],
+                    ['Eat',2],
+                    ['Study',4],
+                    ['Exercise',2]
+                ]);
+
+                var options = {
+                    title:'My Daily Activities'
+                };
+
+                var chart = new google.visualization.PieChart(document.getElementByID('chart_div'));
+                chart.draw(data,options);
+            }
+        </script>
   </head>
     <body style="background-color:#FFFFFF;margin-left:50px;">
         <img src="WebBanner2023.png" alt="Banner" width"1200" height="300">
         <h1><b>ENG0018 Computer Laboratory 2023/24</b></h1>
         <h2>Student URN: 123456</h2>
         <hr>
+        /* Web presentation*/
+        <h2 id = "h"> Conference Project Presentation: Bridge Deck Repairs </h2>
+    <script>
+        var slideImages = ["slide1.jpg","slide2.jpg","slide3.jpg","slide4.jpg"];
+        var currentSlide = 0;
+        function showSlide() {
+            document.getElementById('slide').src = slideImages[currentSlide];
+        }
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slideImages.length;
+            showSlide();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slideImages.length) % slideImages.length;
+            showSlide();
+        }
+        function showSlideNumber(slideNumber) {
+            currentSlide = slideNumber - 1;
+            showSlide();
+        }
+        showSlide();
+    </script>
+    <div id="slide-container">
+        <img id ="slide" src = "slide1.jpg"; alt = "Slide 1" style= "width:100%; max-width:800px">
+        <div class = "button-container">
+            <button class="button" onclick = "prevSlide()">Previous</button>
+            <button class="button" onclick = "nextSlide()">Next</button>
+        </div>
+        <div class = "slide-number-container">
+            <button class = "button" onclick = "showSlideNumber(1)">1</button>
+            <button class = "button" onclick = "showSlideNumber(2)">2</button>
+            <button class = "button" onclick = "showSlideNumber(3)">3</button>
+            <button class = "button" onclick = "showSlideNumber(4)">4</button>
+        </div>
+    </div>
         <h2 style="font-family:calibri;"><b>Conference paper: Bridge Deck Repairs</b></h2>
         <!table with contents>
         <table>
@@ -59,7 +159,7 @@
         <p id="ex1">“This paper presents a novel adaptive active learning strategy. The most accurate classification model from a heterogeneous classifier pool is selected at each learning epoch. Our goal is to achieve greater 
 incremental improvement in accuracy, compared to using a single type of classification model 
 throughout the process. The strategy is evaluated on benchmark data sets. We further consider an 
-application to texture classification problems in sonar mosaic imagery and compare it with nonadaptive active learning and traditional machine learning approaches. Our results show that…We 
+application to texture classification problems in sonar mosaic imagery and compare it with non adaptive active learning and traditional machine learning approaches. Our results show that…We 
 conclude that…”</p>
         <!Introduction>
         <h3 id="Introduction">Introduction</h3>
@@ -93,6 +193,16 @@ conclude that…”</p>
                 <td>9</td>
             </tr>
         </table>
+
+        <div id=”chart_div”></div>
+        
+        <p id="date&time"></p>
+        <script>
+            //Javascript to display the date and time on my webpage
+            const d = new Date();
+            document.getElementById("date&time").innerHTML = d;
+        </script>
+        
         <!References>
         <h3 id="References">References</h3>
     <p>
