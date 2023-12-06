@@ -2,29 +2,66 @@
 <html>
 
   <head>
-      <script> type="text/javascript" src='https://www.gstatic.com/charts/loader.js'></script>
-      <script type="text/javascript">
-          google.charts.load('current',{'packages':['coreheart']});
-          google.charts.setOnLoadCallback(drawChart);
-      </script>
-          
       <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
     <style>
+        body {
+            font-family: "Ubuntu";
+        }
         table {
-            font-family: aria;, sans-serif;
-            border-collapse: collapse
             width: 50%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        td, th {
-            border: 1px solid #dddddd;
-            text-align: left;
+        th, td {
+            border: 1px solid #ddd;
             padding: 8px;
+            text-align: left;
         }
 
-        tr:nth-child(even) {
-            background-color: #dddddd;
+        th {
+            background-color: #f2f2f2;
         }
+
+        tr a{
+            color: black;
+            text-decoration: none;
+            padding: 5px 0;
+            display: block;
+        }
+        tr a:hover {
+            background-color: #ddd;
+        }
+        .dropdown-content {
+            display: none;
+        }
+
+        .toggle-button {
+            text-decoration: none;
+            color: black;
+            display: inline-block;
+            padding: 10px 5px;
+            background-color: #f2f2f2;
+            cursor:pointer;
+        }
+
+        .dropdown-content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 5px 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        h2 {
+            text-align:center;
+        }
+        
       .myslides {display:none;}
                   .h {
                 text-align: center;
@@ -44,7 +81,7 @@
             }
             .button {
                 padding: 10px 20px;
-                background-color: #4CAF50;
+                background-color: #29C5F6;
                 color: white;
                 border: none;
                 border-radius: 5px;
@@ -67,36 +104,16 @@
                 margin-bottom: -50px; /* Add some margin between the slide number buttons and the image */
             }
     </style>
-    <h2> URN 6796018 </h2>
-              <script type="text/javascript">
-            function drawChart(){
-                var data = google.visualization.arrayToDataTable([
-                    ['Task','Hours per Day'],
-                    ['Work',8],
-                    ['Sleep',8],
-                    ['Eat',2],
-                    ['Study',4],
-                    ['Exercise',2]
-                ]);
-
-                var options = {
-                    title:'My Daily Activities'
-                };
-
-                var chart = new google.visualization.PieChart(document.getElementByID('chart_div'));
-                chart.draw(data,options);
-            }
-        </script>
   </head>
     <body style="background-color:#FFFFFF;margin-left:50px;">
         <img src="WebBanner2023.png" alt="Banner" width"1200" height="300">
         <h1><b>ENG0018 Computer Laboratory 2023/24</b></h1>
-        <h2>Student URN: 123456</h2>
+        <h2> URN 6796018 </h2>
         <hr>
-        /* Web presentation*/
-        <h2 id = "h"> Conference Project Presentation: Bridge Deck Repairs </h2>
+         <! –– Web presentation -- !>
+        <h2> Conference Project Presentation: Green Chemistry: A framework for sustainable development </h2>
     <script>
-        var slideImages = ["slide1.jpg","slide2.jpg","slide3.jpg","slide4.jpg"];
+        var slideImages = ["slide1.jpg","slide2.jpg","slide3.jpg","slide4.jpg","slide5.jpg"];
         var currentSlide = 0;
         function showSlide() {
             document.getElementById('slide').src = slideImages[currentSlide];
@@ -127,93 +144,119 @@
             <button class = "button" onclick = "showSlideNumber(2)">2</button>
             <button class = "button" onclick = "showSlideNumber(3)">3</button>
             <button class = "button" onclick = "showSlideNumber(4)">4</button>
+            <button class = "button" onclick = "showSlideNumber(5)">5</button>
         </div>
     </div>
-        <h2 style="font-family:calibri;"><b>Conference paper: Bridge Deck Repairs</b></h2>
+        
+        
+        <h2 style = "padding-top:110px"><b>Green Chemistry: A framework for sustainable development</b></h2>
         <!table with contents>
-        <table>
-
+        <table id = "Contents">
             <tr>
-                <th><h3>Table of contents</h3></th>
+                <th>Table of Contents</th>
             </tr>
-            
             <tr>
-                <td><a href="#Abstract">Abstract</a></td>
+                <td>
+                    <a href="#Abstract">Abstract</a>
+                </td>
             </tr>
-            
             <tr>
-                <td><a href="#Introduction">Introduction</a></td>
+                <td>
+                    <a href="#Introduction">Introduction</a>
+                </td>
             </tr>
-            
             <tr>
-                <td><a href="#Analysis and discussion">Analysis and discussion</a></td>
+                <td>
+                    <div class="dropdown">
+                        <span class="toggle-button" onclick="toggleDropdown('sectionDropdown')"><b>The principles of Green Chemistry Explained</b></span>
+                        <div class="dropdown-content" id="sectionDropdown">
+                            <p><b>Less Waste</b></p>
+                                <a href="#Prevention">Prevention</a>
+                                <a href="#AtomEconomy">Atom Economy</a>
+                            <p><b>Safer Environment</b></p>
+                                <a href="#DesignforEnergyEfficiency">Design for Energy Efficiency</a>
+                                <a href="#LessHazardousChemicalSyntheses">Less Hazardous Chemical Syntheses</a>
+                                <a href="#DesignforDegradation">Design for Degradation</a>
+                            <p><b>Renewable Development</b></p>
+                                <a href="#UseofRenewableFeedstocks">Use of Renewable Feedstocks</a>
+                                <a href="#Real-timeanalysisforPollutionPrevention">Real-time analysis for Pollution Prevention</a>
+                        </div>
+                    </div>
+                </td>
             </tr>
-            
             <tr>
-                <td><a href="#References">References</a></td>
+                <td>
+                    <a href="#Conclusion">Conclusion</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="#References">References</a>
+                </td>
             </tr>
         </table>
+
+        <script>
+            function toggleDropdown(sectionId) {
+                var section = document.getElementById(sectionId);
+                if (section.style.display === 'table-row') {
+                    section.style.display = 'none';
+                } else {
+                    section.style.display = 'table-row';
+                }
+            }
+        </script>
         <hr>
         <!Abstract>
         <h3 id="Abstract"></h3>
-        <p id="ex1">“This paper presents a novel adaptive active learning strategy. The most accurate classification model from a heterogeneous classifier pool is selected at each learning epoch. Our goal is to achieve greater 
-incremental improvement in accuracy, compared to using a single type of classification model 
-throughout the process. The strategy is evaluated on benchmark data sets. We further consider an 
-application to texture classification problems in sonar mosaic imagery and compare it with non adaptive active learning and traditional machine learning approaches. Our results show that…We 
-conclude that…”</p>
+        <p id="ex1"> “With a global urge on sustainbale development, it is necessary to create a framework for sustainable development. With the core ideals of Less Waste, Safer Environment and Renewable Development, John Warner and Paul Anastas <a href=”#1”> (Anastas & Warner, 1998) </a> first developed a set of rules to standardise sustainable research and practise. This article serves an introductory piece to this framwork, summarising expert knowledge and insight onto why such rules are most important for the future of the chemistry industry.”</p>
         <!Introduction>
         <h3 id="Introduction">Introduction</h3>
-        <!Analysis and discussion>
-        <h3 id="Analysis and discussion">Analysis and Discussion</h3>
-        <p1>Bridge deck repair durability is the subject of much recent research such as in <a href=”https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034”>Toshihiko et al
-(2023).</a> Table 1: Data on cost and lifespan of bridge repairs</p1>
-        <table>
-            <tr>
-                <th>£ Cost of repairs</th>
-                <th>Lifespan of repairs (years)</th>
-            </tr>
-            <tr>
-                <td>0.7 m </td>
-                <td>3</td>
-            </tr>
-            <tr>
-                <td>3.3 m</td>
-                <td>4</td>
-            </tr>
-            <tr>
-                <td>2.6 m</td>
-                <td>5</td>
-            </tr>
-            <tr>
-                <td>17.4 m</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>8.8 m</td>
-                <td>9</td>
-            </tr>
-        </table>
-
-        <div id=”chart_div”></div>
-        
-        <p id="date&time"></p>
-        <script>
-            //Javascript to display the date and time on my webpage
-            const d = new Date();
-            document.getElementById("date&time").innerHTML = d;
-        </script>
-        
-        <!References>
+        <p></p>
+        <!Less Waste>
+        <h2>Less Waste</h2>
+        <h3 id="">Prevention</h3>
+        <p></p>
+        <h3 id="">Atom Economy</h3>
+        <p></p>
+        <h3 id="">Prevention</h3>
+        <p></p>
+        <!Safer Environment>
+        <h2>Safer Environment</h2>
+        <h3 id="">Prevention</h3>
+        <p></p>
+        <h3 id="">Atom Economy</h3>
+        <p></p>
+        <h3 id="">Prevention</h3>
+        <p></p>
+        <!Renewable Development>
+        <h2>Renewable Development</h2>
+        <h3 id="">Prevention</h3>
+        <p></p>
+        <h3 id="">Atom Economy</h3>
+        <p></p>
+        <h3 id="">Prevention</h3>
+        <p></p>
         <h3 id="References">References</h3>
-    <p>
-        <pre>
-Angluin, D (1988), Queries and concept learning. Machine learning 2, (4), 319-342.
-Brinker, K (2003), Incorporating Diversity in Active Learning with Support Vector Machines, Proceedings of the Twentieth International Conference on Machine Learning (ICML-2003).
-Bruzzone, L, Chi, M and Marconcini, M (2006), A novel transductive SVM for semisupervised classication of remote-sensing images, IEEE Transactions on Geoscience and Remote Sensing, 44, (11), 3363.
-Bruzzone, L and Persello, C (2009), Active learning for classification of remote sensing images.
-In: Geoscience and Remote Sensing Symposium, 2009 IEEE International, IGARSS 2009, 3.
-Campbell, C, Cristianini, N and Smola, A (2000), Query learning with large margin classifiers. In: Proc. 17th Internat. Conf. on Machine Learning. Morgan Kaufman, Stanford, CA, 111-118.
-        </pre>
+            <p id = "1">American Chemistry Society, 2023. 12 Principles of Green Chemistry. [Online] Available at: https://www.acs.org/greenchemistry/principles/12-principles-of-green-chemistry.html [Accessed 22 October 2023].</p>
+            
+            <p id = "2">Anastas, P. T. & Warner, J. C., 1998. Green Chemistry: Theory and Practice. 1st ed. Oxfors: Oxford University Press.</p>
+            
+            <p id = "3">Brown, J. C., Moshe, M., Blackwell, A. & Barclay, W. S., 2021. Inactivation of SARS-CoV-2 in chlorinated swimming pool water.. Water research, 205(1), pp. 117718-117718.</p>
+            
+            <p id = "4">Freinkel, S., 2011. Improving Nature. In: Plastic: A Toxic Love Story. Boston, New York: Houghton Mifflin Harcourt, pp. 15-17.</p>
+            
+            <p id = "5">Frost, B. M., 1991. The atom economy--A search for synthetic efficiency. Science, 254(5037), pp. 1471-1477. </p>
+            
+            <p id = "6">GCIPR, A., Henderson, R. K., Kindervater, J. & Manley, J. B., 2008. Lessons Learned through Measuring Green Chemistry Performance: The Pharmaceutical Experience.. Washington: ACS GCIPR.</p>
+            
+            <p id = "7">O’Brien, T. F., Bommaraju, T. V. & Hine, F., 2005. History of the Chlor-Alkali Industry. In: n.d., ed. Handbook of Chlor-Alkali Technology. New York, NY: Springer, pp. 17-36.</p>
+            
+            <p id = "8">Sheldon, R., n.d.. The E Factor. [Online] Available at: </p> https://www.sheldon.nl/roger/efactor.html#:~:text=A%20higher%20E%20factor%20means,by%20kilograms%20of%20product%20out. [Accessed 25 10 2023].
+            
+            <p id = "9"> Suntory, 2021. Suntory Introduces 100% Plant-Based PET Bottle Prototypes. [Online] Available at: https://www.suntory.com/news/article/14037E.html [Accessed 25 10 2021]. </p>
+            
+            <p id = "10">The Ecologist, 1992. Blueprint For Survival. s.l.:The Massachussets Institute of Technology.</p>
     </p>
       
     </body>
