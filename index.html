@@ -7,6 +7,8 @@
     <style>
         body {
             font-family: "Ubuntu";
+            margin-left: auto;
+            margin-right: auto;
         }
         table {
             width: 50%;
@@ -61,11 +63,18 @@
         h2 {
             text-align:center;
         }
-        
-      .myslides {display:none;}
-                  .h {
-                text-align: center;
-            }
+        #ex1 {
+            text-align: balance;
+        }
+        .Fig1 {
+            text-align: justify;
+            width: [width of img];
+        }
+
+        .Fig1 img {
+            display: block;
+        }
+
             /* Slide to centre the image */
             #slide-container {
                 text-align: center;
@@ -173,8 +182,8 @@
                             <p><b>Less Waste</b></p>
                                 <a href="#Prevention">Prevention</a>
                                 <a href="#AtomEconomy">Atom Economy</a>
-                            <p><b>Safer Environment</b></p>
                                 <a href="#DesignforEnergyEfficiency">Design for Energy Efficiency</a>
+                            <p><b>Safer Environment</b></p>
                                 <a href="#LessHazardousChemicalSyntheses">Less Hazardous Chemical Syntheses</a>
                                 <a href="#DesignforDegradation">Design for Degradation</a>
                             <p><b>Renewable Development</b></p>
@@ -209,54 +218,71 @@
         <hr>
         <!Abstract>
         <h3 id="Abstract"></h3>
-        <p id="ex1"> “With a global urge on sustainbale development, it is necessary to create a framework for sustainable development. With the core ideals of Less Waste, Safer Environment and Renewable Development, John Warner and Paul Anastas <a href=”#1”> (Anastas & Warner, 1998) </a> first developed a set of rules to standardise sustainable research and practise. This article serves an introductory piece to this framwork, summarising expert knowledge and insight onto why such rules are most important for the future of the chemistry industry.”</p>
+        <p id="ex1"> “With a global urge on sustainable development, it is necessary to create a framework for sustainable development. With the core ideals of Less Waste, Safer Environment and Renewable Development, John Warner and Paul Anastas <a href="#R2"> (Anastas & Warner, 1998) </a> first developed a set of rules to standardise sustainable research and practise. This article serves an introductory piece to this framwork, summarising expert knowledge and insight onto why such rules are most important for the future of the chemistry industry.”</p>
         <!Introduction>
         <h3 id="Introduction">Introduction</h3>
-        <p></p>
+        <p id="ex1">Scientific progress has not always brought to clean victories. Many advancements had serious ramifications, like the invention of the first plastic, celluloid, introduced as an alternative to ivory for pool balls, whose high demand, with other industries’, had caused numbers of elephant species to become extinct <a href="#R4">(Freinkel, 2011)</a>. With the introduction on the concept now known as “Sustainability” on the “Blueprint For Survival” <a href="#R10">(The Ecologist, 1992)</a>, it was clear to the global community that future innovation needed a more robust structure of control to avoid more implications.
+        This, and other global actions, underlined the necessity to define the main targets for a “sustainable development”, most notably the principles of Green Chemistry.
+        Developed by John Warner and Paul Anastas in 1998, these principles can be summarised in three key concepts: Less Waste, Safer Environment and Renewable Development.</p>
         <!Less Waste>
-        <h2>Less Waste</h2>
-        <h3 id="">Prevention</h3>
-        <p></p>
-        <h3 id="">Atom Economy</h3>
-        <p></p>
-        <h3 id="">Prevention</h3>
-        <p></p>
+        <h2><b>Less Waste</b></h2>
+        <h3 id="Prevention">Prevention</h3>
+        <p id="ex1">“It is better to prevent waste than to treat or clean up waste after it has been created.” <a href="#R2">(Anastas & Warner, 1998)</a></p>
+        <p id="ex1">Chemists often use analytical calculation methods, the most common being the E-factor. The E-factor is used to measure waste, connecting the weight of waste produced to the weight of the desired product, as explained by Roger Sheldon <a href="#R8">(Sheldon, n.d.)</a>. The higher the e-factor the more  wasteful the process.</p>
+        <p id="ex1">However, the ACS Green Chemistry Institute Pharmaceutical Roundtable utilises process mass intensity (PMI) , a ratio of all resources used (e.g., water, raw materials, etc.) to the weight of the active drug ingredient produced , a shift of focus due to pharmaceutical production processes’ high inefficiency when using solvents and water, shown by the ACS GCIPR’s benchmark study on the production of an Active Pharmaceutical Ingredient in American industries in 2008, which revealed that more that 32% of materials involved in was water (Fig 1).</p>
+<div class="Fig1">
+    <img src = "PieChart.png"; width="45%"; height="45%";>
+    <p>(Fig 1): Composition by Mass of the type of materials used to manufacture API as reported in the 2008 PMI Benchmarking <a href="R6">(GCIPR, et al., 2008)</a>.</p>
+</div>
+        <h3 id="AtomEconomy">Atom Economy</h3>
+        <p id="ex1">“Synthetic methods should be designed to maximize incorporation of all materials used in the process into the final product.” <a href="R2">(Anastas & Warner, 1998)</a></p>
+        <p id="ex1">This principle simply poses the question “What atoms of the reactants used in this process are part of the desired products?”
+        This idea, developed by Barry Trost <a href="R5">(Frost, 1991)</a>, can be resumed in this equation.
+        %Atom Economy = (Total Mass of the desired products’ atoms/ Mass of all reactants’ atoms) x 100</p>
+        <h3 id="DesignforEnergyEfficiency">Design for Energy Efficiency</h3>
+        <p id="ex1">“Energy requirements should be recognized for their environmental and economic impacts and should be minimized. Synthetic methods should be conducted at ambient temperature and pressure.” <a href="R2">(Anastas & Warner, 1998)</a></p>
+        <p id="ex1">As stated by Dr David Constable, the only time energy gets considered is during, temperature changing, electrochemistry, pumping and thermodynamics calculations. The focus is solely on the energy required for those processes rather than the optimisation of such procedures. <<a href="R1">>(American Chemistry Society, 2023)</a>. Use of energy is still a key issue of climate change and so its use should be extremely efficient.</p>
         <!Safer Environment>
-        <h2>Safer Environment</h2>
-        <h3 id="">Prevention</h3>
-        <p></p>
-        <h3 id="">Atom Economy</h3>
-        <p></p>
-        <h3 id="">Prevention</h3>
-        <p></p>
+        <h2><b>Safer Environment</b></h2>
+        <h3 id="LessHazardousChemicalSyntheses">Less Hazardous Chemical Syntheses</h3>
+        <p id="ex1">“Wherever practicable, synthetic methods should be designed to use and generate substances that possess little or no toxicity to human health and the environment.” <a href="R2">(Anastas & Warner, 1998)</a></p>
+        <p id="ex1">Chemists use toxic substances because reactive chemicals provide more favourable reactions <a href="R2">(American Chemistry Society, 2023)</a>. So, unless new processes with other chemicals are discovered, toxic materials will stay. But chemists should not deem this as impractical and place no thought on this.</p>
+        <p id="ex1">Exemplary of this idea is the evolution of chlorine gas production, going from poisonous mercury cells and Asbestos-based diaphragm cells to Cellulose-based Membranes, which are less hazardous <a href="R7">(O’Brien, et al., 2005)</a>. Had this reinvention not happened with the ban of mercury, the recent production of chlorine, due to its role against Covid-19 <a href="R3">(Brown, et al., 2021), could have led to serious repercussions.</a></p>
+        <h3 id="DesignforDegradation">Design for Degradation</h3>
+        <p id="ex1">“Chemical products should be designed so that at the end of their function they break down into innocuous degradation products and do not persist in the environment.” <a href="R2">(Anastas & Warner, 1998)</a></p>
+        <p id="ex1">This statement simply states that, as well as designing chemicals and processes that are non-toxic, one should also consider that all products and by-products should not present hazardous properties. Processes such as biodegradation should be incorporated into the design of chemical processes to keep environmental impact minimum.</p>
+        <p id="ex1">A great example are Biobased plastics, produced by biodegrading material such as waste biomass with companies such as Suntory now producing PET from wood <a href="R9">(Suntory, 2021)</a>.</p>
         <!Renewable Development>
-        <h2>Renewable Development</h2>
-        <h3 id="">Prevention</h3>
-        <p></p>
-        <h3 id="">Atom Economy</h3>
-        <p></p>
-        <h3 id="">Prevention</h3>
-        <p></p>
+        <h2><b>Renewable Development</b></h2>
+        <h3 id="UseofRenewableFeedstocks">Use of Renewable Feedstocks</h3>
+        <p id="ex1">“A raw material or feedstock should be renewable rather than depleting whenever technically and economically practicable.” <a href="R2">(Anastas & Warner, 1998)</a></p>
+        <p id="ex1">As of now, the industry relies on finite resources such as underground minerals.</p>
+        <p id="ex1">A solution is using carbon from CO<sub>2</sub> and Methane (CH<sub>4</sub>) in the atmosphere via photosynthesis of plants, collectively called biomass, states Dr Wool, adding that, of 170 billion tons of yearly natural biomass, only 3.5% is used by humans <a href="R1">(American Chemistry Society, 2023)</a>. The present challenge is developing methods of use that are non-toxic and lead to a negative carbon footprint, C&Delta, equal to C<sub>(out)</sub> – C<sub>(in)</sub>.</p>
+        <h3 id="Real-timeanalysisforPollutionPrevention">Real-time analysis for Pollution Prevention</h3>
+        <p id="ex1">“Analytical methodologies need to be further developed to allow for real-time, in-process monitoring and control prior to the formation of hazardous substances.” <a href="R2">(Anastas & Warner, 1998)</a></p>
+        <p id="ex1">Real-time feedback is of utmost necessity, as stated by Douglas Raynie, Assistant professor at South Dakota State University. This is what Analytical Chemistry is about. Factors such as temperature and pH change can be determined and detected before major incidents occur, he adds. <a href="R1">(American Chemistry Society, 2023)</a>. This results in safer chemistry.</p>
+        <h3 id="Conclusion">Conclusion</h3>
+        <p id="ex1">These principles provide a systematic approach to reduce environmental impact in chemical processes, a fundamental step towards sustainable development. However, it remains challenging to develop in a sustainable way, when the approach is less “profitable”, especially with a lack of support, but the Chemistry industry must not lose focus.</p>
         <h3 id="References">References</h3>
-            <p id = "1">American Chemistry Society, 2023. 12 Principles of Green Chemistry. [Online] Available at: https://www.acs.org/greenchemistry/principles/12-principles-of-green-chemistry.html [Accessed 22 October 2023].</p>
+            <p id="R1">American Chemistry Society (2023). 12 Principles of Green Chemistry. [Online] Available at: <a href="https://www.acs.org/greenchemistry/principles/12-principles-of-green-chemistry.html">https://www.acs.org/greenchemistry/principles/12-principles-of-green-chemistry.html</a> [Accessed 22 October 2023].</p>
             
-            <p id = "2">Anastas, P. T. & Warner, J. C., 1998. Green Chemistry: Theory and Practice. 1st ed. Oxfors: Oxford University Press.</p>
+            <p id="R2">Anastas, P. T. & Warner, J. C. (1998). Green Chemistry: Theory and Practice. 1st ed. Oxfors: Oxford University Press.</p>
             
-            <p id = "3">Brown, J. C., Moshe, M., Blackwell, A. & Barclay, W. S., 2021. Inactivation of SARS-CoV-2 in chlorinated swimming pool water.. Water research, 205(1), pp. 117718-117718.</p>
+            <p id="R3">Brown, J. C., Moshe, M., Blackwell, A. & Barclay, W. S. (2021). Inactivation of SARS-CoV-2 in chlorinated swimming pool water.. Water research, 205(1), pp. 117718-117718.</p>
             
-            <p id = "4">Freinkel, S., 2011. Improving Nature. In: Plastic: A Toxic Love Story. Boston, New York: Houghton Mifflin Harcourt, pp. 15-17.</p>
+            <p id ="R4">Freinkel, S. (2011). Improving Nature. In: Plastic: A Toxic Love Story. Boston, New York: Houghton Mifflin Harcourt, pp. 15-17.</p>
             
-            <p id = "5">Frost, B. M., 1991. The atom economy--A search for synthetic efficiency. Science, 254(5037), pp. 1471-1477. </p>
+            <p id="R5">Frost, B. M. (1991). The atom economy--A search for synthetic efficiency. Science, 254(5037), pp. 1471-1477. </p>
             
-            <p id = "6">GCIPR, A., Henderson, R. K., Kindervater, J. & Manley, J. B., 2008. Lessons Learned through Measuring Green Chemistry Performance: The Pharmaceutical Experience.. Washington: ACS GCIPR.</p>
+            <p id="R6">GCIPR, A., Henderson, R. K., Kindervater, J. & Manley, J. B. (2008). Lessons Learned through Measuring Green Chemistry Performance: The Pharmaceutical Experience.. Washington: ACS GCIPR.</p>
             
-            <p id = "7">O’Brien, T. F., Bommaraju, T. V. & Hine, F., 2005. History of the Chlor-Alkali Industry. In: n.d., ed. Handbook of Chlor-Alkali Technology. New York, NY: Springer, pp. 17-36.</p>
+            <p id="R7">O’Brien, T. F., Bommaraju, T. V. & Hine, F. (2005). History of the Chlor-Alkali Industry. In: n.d., ed. Handbook of Chlor-Alkali Technology. New York, NY: Springer, pp. 17-36.</p>
             
-            <p id = "8">Sheldon, R., n.d.. The E Factor. [Online] Available at: </p> https://www.sheldon.nl/roger/efactor.html#:~:text=A%20higher%20E%20factor%20means,by%20kilograms%20of%20product%20out. [Accessed 25 10 2023].
+            <p id="R8">Sheldon, R. (n.d.). The E Factor. [Online] Available at: <a href = "https://www.sheldon.nl/roger/efactor.html#:~:text=A%20higher%20E%20factor%20means,by%20kilograms%20of%20product%20out.">https://www.sheldon.nl/roger/efactor.html#:~:text=A%20higher%20E%20factor%20means,by%20kilograms%20of%20product%20out.</a> [Accessed 25 10 2023].</p>
             
-            <p id = "9"> Suntory, 2021. Suntory Introduces 100% Plant-Based PET Bottle Prototypes. [Online] Available at: https://www.suntory.com/news/article/14037E.html [Accessed 25 10 2021]. </p>
+            <p id="R9"> Suntory (2021). Suntory Introduces 100% Plant-Based PET Bottle Prototypes. [Online] Available at: <a href = "https://www.suntory.com/news/article/14037E.html">https://www.suntory.com/news/article/14037E.html</a> [Accessed 25 10 2021]. </p>
             
-            <p id = "10">The Ecologist, 1992. Blueprint For Survival. s.l.:The Massachussets Institute of Technology.</p>
+            <p id="R10">The Ecologist (1992). Blueprint For Survival. s.l.:The Massachussets Institute of Technology.</p>
     </p>
       
     </body>
